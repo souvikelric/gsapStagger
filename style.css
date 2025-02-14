@@ -4,6 +4,57 @@
   box-sizing: border-box;
 }
 
+nav {
+  position: fixed;
+  transform-origin: top;
+  font-size: 1.7vw;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #111;
+  color: white;
+
+  ul {
+    width: 100%;
+    height: 100%;
+    padding: 0 40px;
+    padding-right: 100px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .right-items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4vw;
+
+      li {
+        list-style: none;
+
+        a {
+          font-size: 1.3vw;
+          text-decoration: none;
+          color: white;
+          letter-spacing: 0.2vw;
+          transform: scale(1);
+          transition: all 0.3s;
+          padding: 8px 15px;
+          border-radius: 8px;
+
+          &:hover {
+            color: rgb(36, 36, 34);
+            background-color: rgb(208, 205, 205);
+          }
+        }
+      }
+    }
+  }
+}
+
 .container {
   background-color: rgb(224, 227, 227);
   height: 100vh;

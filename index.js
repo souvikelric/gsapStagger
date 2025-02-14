@@ -49,4 +49,12 @@ tl.from(img, {
     opacity: 0,
     y: 20,
     stagger: 0.1,
+  })
+  .from("nav", {
+    transform: "scaleY(0)",
+  })
+  .from("nav div", {
+    opacity: 0,
+    y: -40,
+    stagger: 0.2,
   });
