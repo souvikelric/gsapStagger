@@ -81,12 +81,21 @@ const H1First = sectionH1[0];
 const H1Second = sectionH1[1];
 
 console.log(H1First.innerText, H1Second.innerText);
+const tl2 = gsap.timeline();
 
-gsap.from(hidden, {
+tl.to(container2, {
   scrollTrigger: {
     trigger: container2,
-    start: "40% 70%",
-    end: "60% 60%",
+    start: "10% 70%",
+    end: "10% 50%",
+    scrub: 3,
+  },
+  clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+}).from(hidden, {
+  scrollTrigger: {
+    trigger: container2,
+    start: "50% 70%",
+    end: "50% 60%",
     scrub: 3,
   },
   stagger: 0.1,

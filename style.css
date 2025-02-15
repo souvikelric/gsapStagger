@@ -74,6 +74,20 @@ nav {
   align-items: center;
   justify-content: space-between;
 
+  &:nth-of-type(2) {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    background: rgba(0, 0, 0, 0.6)
+      url("https://images.pexels.com/photos/10788135/pexels-photo-10788135.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    p {
+      font-size: 1.8vw;
+      margin-left: 10px;
+      width: 70%;
+    }
+  }
+
   .flex-vertical {
     display: flex;
     align-items: center;
@@ -101,7 +115,7 @@ nav {
   }
 
   .green {
-    color: rgb(2, 97, 103);
+    color: rgb(39, 208, 220);
   }
 
   .image-wrapper {
