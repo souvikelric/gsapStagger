@@ -1,4 +1,17 @@
-const h1Elements = document.querySelectorAll("h1");
+gsap.registerPlugin(ScrollTrigger);
+
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+const container1 = document.querySelector(".container");
+
+const h1Elements = container1.querySelectorAll("h1");
 
 function splitTextAnimation(element) {
   const text = element.textContent.split("");
@@ -58,3 +71,27 @@ tl.from(img, {
     y: -40,
     stagger: 0.2,
   });
+
+const container2 = document.querySelectorAll(".container")[1];
+const hidden = container2.querySelectorAll(".hidden");
+console.log(container2);
+const sectionH1 = container2.querySelectorAll("h1");
+console.log(sectionH1);
+const H1First = sectionH1[0];
+const H1Second = sectionH1[1];
+
+console.log(H1First.innerText, H1Second.innerText);
+
+gsap.from(hidden, {
+  scrollTrigger: {
+    trigger: container2,
+    start: "40% 70%",
+    end: "60% 60%",
+    scrub: 3,
+  },
+  stagger: 0.1,
+  duration: 1,
+  clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+  // opacity: 0,
+  // y: 50,
+});
